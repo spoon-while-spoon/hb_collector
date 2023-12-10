@@ -1,4 +1,6 @@
-# Documentation hb_collector - serverless version
+# Homebridge Collector SL 
+
+Documentation on how to setup the serverless version of the Homebridge Collector. 
 
 ## Overview
 
