@@ -1,0 +1,7 @@
+{
+    "username": "HOMEBRIDGE-USERNAME",
+    "password": "HOMEBRIDGE-PASSWORD",
+    "otp": "string",
+    "login_url": "http://HOMEBRIDGE-IP-ADRESS:PORT/api/auth/login",
+    "device_url": "http:/HOMEBRDIGE-IP-ADRESS:PORT/api/accessories/UNIQUE-ID"
+}
