@@ -63,7 +63,7 @@ Your respond should look like that:
 ```
 Then use the given token in the following command to  get a JSON respond with the data for all accessories. These files can get quite large and depending on the form of request often unformatted so I recommend you use some form of formatter. 
 
-```json
+```bash
 curl -X 'GET' \
   'http://192.168.2.20:8181/api/accessories' \
   -H 'accept: */*' \
