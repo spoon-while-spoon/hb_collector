@@ -21,3 +21,11 @@ def query_homebridge_api(token):
 
 token, token_expiry = login()
 
+# API loop
+while True:
+    
+    if datetime.now() >= token_expiry:
+        token, token_expiry = login()
+
+    query_homebridge_api(token)
+    time.sleep(60)  # wait 60
