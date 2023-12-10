@@ -70,12 +70,12 @@ def main():
         create_database()
         token, token_expiry = login()
 
-        for _ in range(5):
+        while True:  # Change to an infinite loop
             if datetime.now() >= token_expiry:
                 token, token_expiry = login()
             
             query_homebridge_api(token)
-            time.sleep(60)
+            time.sleep(60)  # Wait for 60 seconds before the next iteration
 
     except Exception as e:
         logging.error(f"An error occurred: {e}")
