@@ -1,7 +1,7 @@
 {
-    "username": "HOMEBRIDGE-USERNAME",
-    "password": "HOMEBRIDGE-PASSWORD",
+    "username": "admin",
+    "password": "admin",
     "otp": "string",
-    "login_url": "http://HOMEBRIDGE-IP-ADRESS:PORT/api/auth/login",
-    "device_url": "http:/HOMEBRDIGE-IP-ADRESS:PORT/api/accessories/UNIQUE-ID"
+    "login_url": "http://192.168.2.20:8181/api/auth/login",
+    "device_url": "http://192.168.2.20:8181/api/accessories/34f747c785c7a0c34a651109d7ff14ca97622e7028a7a6587a9f7e8c4f41ec08"
 }
