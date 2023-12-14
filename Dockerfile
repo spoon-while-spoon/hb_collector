@@ -9,7 +9,7 @@ COPY config.json ./
 # Port, den das Programm verwendet (falls zutreffend), freigeben
 # EXPOSE 8000
 
-RUN pip install --upgrade pip
+# RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "./collector.py"]
