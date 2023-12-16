@@ -8,17 +8,15 @@ services:
     restart: unless-stopped
 
   db:
-    image: mysql-server:5.7
+    image: mysql/mysql-server:5.7
     volumes:
-      - vol-db: /var/lib/mysql
+      - vol-db:/var/lib/mysql
     environment:
-#     MYSQL_ROOT_PASSWORD:    ${MYSQL_ROOT_PASSWORD}
-#     MYSQL_DATABASE:         ${MYSQL_DATABASE}
-#     MYSQL_USER:             ${MYSQL_USER}
-#     MYSQL_PASSWORD:         ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD:    example
-      MYSQL_DATABASE:         collectordb
-      MYSQL_USER:             admin
-      MYSQL_PASSWORD:         55mySQL364!
+      MYSQL_ROOT_PASSWORD:    ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE:         ${MYSQL_DATABASE}
+      MYSQL_USER:             ${MYSQL_USER}
+      MYSQL_PASSWORD:         ${MYSQL_PASSWORD}
     restart: always
- 
+
+volumes:
+  vol-db:
