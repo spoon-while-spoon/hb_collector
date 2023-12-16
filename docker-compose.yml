@@ -1,16 +1,24 @@
 version: '3.1'
 
 services:
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+
   db:
     image: mysql-server:5.7
-    restart: always
+    volumes:
+      - vol-db: /var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: 55mySQL364!
-
-  phpmyadmin:
-    image: phpmyadmin
+#     MYSQL_ROOT_PASSWORD:    ${MYSQL_ROOT_PASSWORD}
+#     MYSQL_DATABASE:         ${MYSQL_DATABASE}
+#     MYSQL_USER:             ${MYSQL_USER}
+#     MYSQL_PASSWORD:         ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD:    example
+      MYSQL_DATABASE:         collectordb
+      MYSQL_USER:             admin
+      MYSQL_PASSWORD:         55mySQL364!
     restart: always
-    ports:
-      - 8080:80
-    environment:
-      - PMA_ARBITRARY=1
+ 
